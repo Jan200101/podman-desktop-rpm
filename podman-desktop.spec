@@ -1,12 +1,4 @@
-%global debug_package %{nil}
-
 %global pkg_name Podman-Desktop
-
-#%%global nodejs_includedir %%{_includedir}/electron
-
-#%%global electron_req_version 17.3.1
-#%%global electron_includedir %%{_includedir}/electron
-
 %global _optpkgdir /opt/%{pkg_name}
 %global _icondir %{_datadir}/icons/hicolor/512x512/apps
 
