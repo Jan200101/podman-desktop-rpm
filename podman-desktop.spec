@@ -19,7 +19,7 @@ BuildRequires: yarnpkg
 BuildRequires: libglvnd-devel
 Requires: vulkan-loader
 Requires: python3
-ExclusiveArch: x86_64
+ExclusiveArch: x86_64 aarch64
 
 %description
 %{summary}
