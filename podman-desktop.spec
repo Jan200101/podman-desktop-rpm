@@ -16,6 +16,7 @@ Summary: Podman Desktop
 License: ASL 2.0
 URL: https://github.com/containers/%{name}
 Source0: %{url}/archive/v%{version}.tar.gz
+BuildRequires: python3-devel
 BuildRequires: gcc-c++
 BuildRequires: git-core
 BuildRequires: make
@@ -23,6 +24,7 @@ BuildRequires: npm
 BuildRequires: yarnpkg
 BuildRequires: libglvnd-devel
 Requires: vulkan-loader
+Requires: python3
 ExclusiveArch: x86_64
 
 %description
