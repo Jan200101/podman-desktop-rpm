@@ -8,7 +8,7 @@
 
 Name: podman-desktop
 Version: 0.9.1
-Release: 0
+Release: %autorelease
 Summary: Podman Desktop
 License: ASL 2.0
 URL: https://github.com/containers/%{name}
@@ -67,3 +67,4 @@ ln -s %{_optpkgdir}/%{name} %{buildroot}%{_bindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 
 %changelog
+%autochangelog
