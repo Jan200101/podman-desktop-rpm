@@ -1,0 +1,25 @@
+From ee4ce974d9763535923a04536fdd91029e9a75c1 Mon Sep 17 00:00:00 2001
+From: Lokesh Mandvekar <lsm5@fedoraproject.org>
+Date: Fri, 2 Dec 2022 18:20:21 +0530
+Subject: [PATCH] add repository key
+
+Signed-off-by: Lokesh Mandvekar <lsm5@fedoraproject.org>
+---
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/package.json b/package.json
+index d17390e..44a12cd 100644
+--- a/package.json
++++ b/package.json
+@@ -1,6 +1,7 @@
+ {
+   "name": "podman-desktop",
+   "productName": "Podman Desktop",
++  "repository": "https://github.com/containers/podman-desktop",
+   "version": "0.10.0",
+   "license": "apache-2.0",
+   "private": true,
+-- 
+2.38.1
+
