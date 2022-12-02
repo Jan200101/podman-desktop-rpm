@@ -7,13 +7,14 @@
 %endif
 
 Name: podman-desktop
-Version: 0.9.1
-Release: 2%{?dist}
+Version: 0.10.0
+Release: 1%{?dist}
 Summary: Podman Desktop
 License: ASL 2.0
 URL: https://github.com/containers/%{name}
 Source0: %{url}/archive/v%{version}.tar.gz
 Source1: %{name}.desktop
+Patch0: 0001-add-repository-key.patch
 BuildRequires: python3-devel
 BuildRequires: gcc-c++
 BuildRequires: git-core
@@ -58,6 +59,8 @@ install -dp %{buildroot}%{_bindir}
 ln -s %{_optpkgdir}/%{name} %{buildroot}%{_bindir}/%{name}
 
 %files
+%license LICENSE
+%doc CODE-OF-CONDUCT.md CONTRIBUTING.md README.md SECURITY.md
 %{_bindir}/%{name}
 %dir %{_optpkgdir}
 %{_optpkgdir}/*
