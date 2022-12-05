@@ -14,6 +14,7 @@ License: ASL 2.0
 URL: https://github.com/containers/%{name}
 Source0: %{url}/archive/v%{version}.tar.gz
 Source1: %{name}.desktop
+# Patch0 most likely should be removed for the next upstream release
 Patch0: 0001-add-repository-key.patch
 BuildRequires: python3-devel
 BuildRequires: gcc-c++
