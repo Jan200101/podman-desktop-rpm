@@ -7,15 +7,13 @@
 %endif
 
 Name: podman-desktop
-Version: 0.10.0
-Release: 2%{?dist}
+Version: 1.3.1
+Release: 0%{?dist}
 Summary: Podman Desktop
 License: ASL 2.0
 URL: https://github.com/containers/%{name}
 Source0: %{url}/archive/v%{version}.tar.gz
 Source1: %{name}.desktop
-# Patch0 most likely should be removed for the next upstream release
-Patch0: 0001-add-repository-key.patch
 BuildRequires: python3-devel
 BuildRequires: gcc-c++
 BuildRequires: git-core
@@ -31,10 +29,10 @@ ExclusiveArch: x86_64
 %{summary}
 
 %prep
-%autosetup -Sgit -n %{name}-%{version}
+%autosetup -n %{name}-%{version}
 
 %build
-sed -i "/target: \['flatpak'/d" .electron-builder.config.js
+sed -i "/target: \['flatpak'/d" .electron-builder.config.cjs
 
 yarn install
 yarn compile:current
