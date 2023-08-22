@@ -1,10 +1,7 @@
 %global pkg_name Podman-Desktop
 %global _optpkgdir /opt/%{pkg_name}
 %global _icondir %{_datadir}/icons/hicolor/512x512/apps
-
-%if 0%{?rhel} || 0%{?fedora} <= 37
 %global debug_package %{nil}
-%endif
 
 Name: podman-desktop
 Version: 1.3.1
