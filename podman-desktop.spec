@@ -4,7 +4,7 @@
 %global debug_package %{nil}
 
 Name: podman-desktop
-Version: 1.3.1
+Version: 1.4.0
 Release: 0%{?dist}
 Summary: Podman Desktop
 License: ASL 2.0
