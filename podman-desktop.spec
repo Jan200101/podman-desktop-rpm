@@ -4,7 +4,7 @@
 %global debug_package %{nil}
 
 Name: podman-desktop
-Version: 1.11.1
+Version: 1.18.0
 Release: 0%{?dist}
 Summary: Podman Desktop
 License: ASL 2.0
@@ -16,7 +16,7 @@ BuildRequires: gcc-c++
 BuildRequires: git-core
 BuildRequires: make
 BuildRequires: npm
-BuildRequires: yarnpkg
+BuildRequires: pnpm
 BuildRequires: libglvnd-devel
 Requires: vulkan-loader
 Requires: python3
@@ -31,8 +31,8 @@ ExclusiveArch: x86_64
 %build
 sed -i "/target: \['flatpak'/d" .electron-builder.config.cjs
 
-yarn install
-yarn compile:current
+pnpm install
+pnpm compile:current
 
 rm -f dist/linux-unpacked/resources/app.asar.unpacked/node_modules/ssh2/lib/protocol/crypto/build/node_gyp_bins/python3
 rm -f dist/linux-unpacked/resources/app.asar.unpacked/node_modules/cpu-features/build/node_gyp_bins/python3
